@@ -1,0 +1,150 @@
+.solution {
+	$purple: #631465;
+	$grey: #5e7285;
+
+	text-align: center;
+	padding-top: 40px;
+
+	.content {
+		width: 800px;
+		margin: 0 auto;
+	}
+
+	h3 {
+		@include SkewedCaption(#5e7285);
+		font-size: 40px;
+	}
+	
+	h4 {
+		margin-top: 100px;
+		margin-bottom: 60px;
+		color: #631465;
+		font-size: 15px;
+		text-transform: uppercase;
+	}
+
+	.step {
+		display: flex;
+		margin-bottom: 80px;
+		
+		.text {
+			flex-grow: 1;
+
+			header  {
+				margin-bottom: 24px;
+				text-transform: uppercase;
+				font-size: 15px;
+				font-weight: bold;
+				color: $purple;
+				text-align: left;
+			}
+			
+			.substeps {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				color: $grey;
+
+				.stepname {
+					text-align: left;
+					white-space: nowrap;
+				}
+				
+				.arrow {
+					min-width: 16px;
+					min-height: 16px;
+					padding-left: 30px;
+					padding-right: 30px;
+					background: center center url('../images/solution/arrow_right.svg') no-repeat;
+				}
+			}
+		}
+
+		.filled {
+			display: flex;
+			flex-direction: column;
+			width: 228px;
+			min-width: 228px;
+			height: 128px;
+			border-radius: 7px;
+			padding: 24px 0;
+			box-shadow: -7px 7px 30px rgba(0, 0, 0, 0.2);
+			background-color: $purple;
+			text-align: center;
+			text-transform: uppercase;
+			color: #fff;
+			position: relative;
+			font-size: 11px;
+			font-weight: bold;
+			
+			&:after {
+				content: "";
+				background-color: $purple;
+				background-image: url('../images/solution/arrow_down.svg');
+				background-position: 5px 5px;
+				background-repeat: no-repeat;
+				background-size: 11px 11px;
+				width: 25px;
+				height: 25px;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%, 50%) rotate(45deg);
+				transform-origin: center center;
+			}
+			
+			&.noarrow:after { display: none; }
+			
+			.icon {
+				flex-grow: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 16px;
+			}
+
+			.stepresult {
+				text-align: center;
+			}
+		}
+		
+		.underline {
+			height: 10px;
+			width: calc(100% + 10px);
+			border-bottom: 1px solid $grey;
+			position: relative;
+			z-index: 2;
+			
+			&:after {
+				content: "";
+				position: absolute;
+				right: -12px;
+				bottom: 0;
+				transform: translateY(50%);
+				width: 11px;
+				height: 11px;
+				border: 1px solid $grey;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.why_this {
+		h4 {
+			text-transform: uppercase;
+			text-align: left;
+			margin-top: 80px;
+			margin-bottom: 20px;
+		}
+		
+		ul {
+			padding-left: 17px;
+
+			li {
+				margin-bottom: 28px;
+				color: $grey;
+				text-align: left;
+			}
+		}
+	}
+}

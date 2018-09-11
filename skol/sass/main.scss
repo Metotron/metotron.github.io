@@ -1,0 +1,58 @@
+$headerSize: 32px;
+
+@mixin Dash($color) {
+	display: block;
+	content: "";
+	width: 35px;
+	height: 4px;
+	background-color: $color;
+}
+
+@mixin SkewedCaption($color) {
+	$angle: -11deg;
+	$dashesMargin: -24px;
+
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 30px;
+	transform: skew($angle) rotate($angle);
+	position: relative;
+	color: $color;
+
+	&:before, &:after {
+		@include Dash(#7d2981);
+		position: absolute;
+	}
+
+	&:before {
+		right: 0;
+		top: $dashesMargin;
+	}
+	&:after {
+		bottom: $dashesMargin;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'PF Centro Sans Pro';
+}
+
+html, body {
+	background-color: #fff;
+}
+
+body {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+@import 'fonts/PFCentroSans.css';
+@import 'header';
+@import 'task';
+@import 'auditory';
+@import 'solution';
+@import 'howitwas_results';
+@import 'command';

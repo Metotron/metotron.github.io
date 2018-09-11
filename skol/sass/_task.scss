@@ -1,0 +1,31 @@
+.task {
+	background-position: 0 0, 0 0;
+	background-image: url('../images/bg/task_mask.png'), url('../images/bg/task.jpg');
+	background-repeat: no-repeat, no-repeat;
+	background-size: 100% auto, 100% auto;
+	min-height: 498px;
+	color: #fff;
+	text-align: center;
+	
+	.content {
+		width: 560px;
+		padding-top: 48px;
+		margin: 0 auto;
+	}
+	
+	h3 {
+		font-size: $headerSize;
+		margin: 0 0 24px;
+		text-transform: uppercase;
+		&:after {
+			@include Dash(#fff);
+			margin: 24px auto 0;
+		}
+	}
+	
+	p {
+		margin-bottom: 16px;
+		font-size: 14px;
+		line-height: 1.3;
+	}
+}
