@@ -1,0 +1,14 @@
+.highway {
+	height: 483px;
+	background: 0 0 url('../images/bg/highway.jpg') no-repeat;
+	padding-top: 77px;
+	color: #fff;
+	white-space: pre-line;
+	padding-left: $LeftPadding;
+
+	.text {
+		display: inline-block;
+		background-color: #000;
+		padding: 0 12px 0 6px;
+	}
+}

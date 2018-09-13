@@ -1,0 +1,41 @@
+.reports {
+	padding-top: 65px;
+	display: flex;
+	justify-content: space-around;
+
+	.report {
+		width: 42%;
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.photo {
+		$photoSize: 153px;
+		border-radius: 50%;
+		width: $photoSize;
+		height: $photoSize;
+
+		img { border-radius: 50%; }
+	}
+
+	.name {
+		text-transform: uppercase;
+		font-size: 27px;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+	.position {
+		font-size: 20px;
+	}
+
+	.text {
+		margin-top: 20px;
+
+		p {
+			margin-bottom: 10px;
+			text-align: center;
+		}
+	}
+}

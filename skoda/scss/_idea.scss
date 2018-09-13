@@ -1,0 +1,43 @@
+.idea {
+	padding-top: 24px;
+	padding-left: $LeftPadding;
+	padding-right: $LeftPadding;
+	color: #fff;
+	height: 618px;
+	background: 0 0 url('../images/bg/idea.jpg') no-repeat;
+
+	h3 {
+		@include Header(#fff);
+	}
+
+	.text {
+		margin-top: 20px;
+		font-size: 20px;
+	}
+
+	.circles {
+		display: flex;
+		justify-content: space-around;
+		color: #fff;
+		font-size: 19px;
+		margin-top: 30px;
+
+		h4 {
+			font-size: 27px;
+			text-transform: uppercase;
+			margin: 60px 0 10px;
+			font-weight: bold;
+		}
+
+		.circle {
+			$circleSize: 315px; 
+			border-radius: 50%;
+			background-color: rgba(0, 0, 0, 0.9);
+			width: $circleSize;
+			height: $circleSize;
+			text-align: center;
+
+			&.fill { background-color: #000; }
+		}
+	}
+}

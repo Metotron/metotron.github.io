@@ -1,0 +1,62 @@
+.howitwas {
+	padding-top: 70px;
+	text-align: center;
+
+	h3 {
+		@include Header(#000);
+		margin-bottom: 35px;
+	}
+
+	.videoslider {
+		padding-left: $LeftPadding;
+		padding-right: $LeftPadding;
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		.arrow {
+			cursor: pointer;
+			font-size: 0px;
+			text-align: center;
+
+			&.left { transform: rotate(180deg); }
+			img {
+				display: inline-block;
+			}
+		}
+
+		.ipad {
+			background: 0 0 url('../images/ipad.png') no-repeat;
+			height: 559px;
+			width: 943px;
+			flex-grow: 0;
+			position: relative;
+			
+			iframe {
+				position: absolute;
+				top: 28px;
+				left: 129px;
+			}
+		}
+	}
+
+	.videopoints {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 100px;
+		
+		.point {
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			margin-right: 20px;
+			background-color: #c4c4c4;
+			
+			&:last-child { margin-right: 0; }
+	
+			&.active {
+				background-color: #58c236;
+			}
+		}
+	}
+}
