@@ -30,6 +30,13 @@ section {
 	color: $yellow;
 }
 
+@font-face {
+    font-family: 'Noteworthy';
+    src: url('fonts/Noteworthy-Bold.woff2') format('woff2'),
+        url('fonts/Noteworthy-Bold.woff') format('woff'),
+        url('fonts/Noteworthy-Bold.ttf') format('truetype');
+}
+
 @import "header";
 @import "marketing";
 @import "core";
