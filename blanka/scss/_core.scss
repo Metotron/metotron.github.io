@@ -1,0 +1,18 @@
+.core {
+	$dotsMargin: 50px;
+
+	.dots {
+		background: 0 0 url('../images/core_dots.png') no-repeat;
+		height: 3px;
+		margin-left: -$padding;
+		margin-right: -$padding;
+		
+		&.top    { margin-bottom: $dotsMargin; }
+		&.bottom { margin-top: $dotsMargin; }
+	}
+	
+	.title {
+		@include Header;
+		width: 310px;
+	}
+}
