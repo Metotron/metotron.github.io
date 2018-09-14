@@ -3,7 +3,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 var videoSlider = {
-	videos: ['WiE7mtC7Hqg', 'g3N0QVZ8Ttw', 'oewRadlyrHo'],
+	videos: ['Z0zJ5A4b0v8', 'ntovh2Oi3Dk', 'gB-LEbCwwAI', 'i6t2wkScQXc'],
 	activeVideo: 0,
 	videoPlayer: null,
 
