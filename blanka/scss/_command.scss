@@ -40,17 +40,53 @@
 	.project {
 		@include Header;
 		margin-top: 200px;
+		margin-bottom: 80px;
+	}
+	.people {
+		padding-bottom: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		@supports (justify-content: space-evenly) {
+			justify-content: space-evenly;
+		}
+		@supports not (justify-content: space-evenly) {
+			justify-content: space-around;
+		}
+
+		.person {
+			color: #fff;
+			width: 31%;
+			margin-bottom: 60px;
+
+			.picture {
+				filter: saturate(0);
+				border-radius: 50%;
+				text-align: center;
+
+				img { border-radius: 50%; }
+			}
+			.name {
+				margin-top: 10px;
+				font-size: 28px;
+				font-weight: bold;
+			}
+			.position {
+				font-size: 24px;
+			}
+		}
 	}
 
 	.sidepic {
 		position: absolute;
-		
+
 		&.left  { left: 0; }
 		&.right { right: 0; }
 
 		&.broccoli { top: -60px; }
 		&.cup { top: 130px; }
 		&.dots { top: 705px; }
-		&.mushrooms { top: 800px; }
+		&.mushrooms { top: 840px; }
+		&.leaf { top: 1710px; }
+		&.garlic { top: 1530px; }
 	}
 }
