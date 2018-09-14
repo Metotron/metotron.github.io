@@ -4,5 +4,102 @@
 
 	h3 {
 		@include Header;
+		margin-bottom: 40px;
+		position: relative;
+		z-index: 2;
+	}
+	.why { margin-top: 120px; }
+	.features { margin-top: 150px; }
+
+	.text {
+		color: #fff;
+		font-size: 16px;
+		position: relative;
+		z-index: 2;
+	}
+
+	.t1, .t2 {
+		width: 700px;
+		margin-top: 20px;
+	}
+	.rocketline {
+		$rocketWidth: 85px;
+		$okmarkWidth: 84px;
+
+		margin-top: 130px;
+		width: calc(100% - #{$okmarkWidth});
+		height: 83px;
+		position: relative;
+		background: #{$rocketWidth} center url('../images/solution/line.png') no-repeat;
+
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			display: block;
+			height: 83px;
+		}
+		&:before {
+			left: 0;
+			width: $rocketWidth;
+			background: 0 0 url('../images/solution/rocket.png') no-repeat;
+		}
+		&:after {
+			right: -$okmarkWidth;
+			width: $okmarkWidth;
+			background: 0 0 url('../images/solution/okmark.png') no-repeat;
+		}
+	}
+
+	.videos {
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-around;
+		
+		.block {
+			text-align: center;
+		}
+
+		.picture {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border: 3px solid $yellow;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+		}
+
+		.text {
+			margin-top: 20px;
+		}
+	}
+
+	.sidepic {
+		position: absolute;
+		
+		&.leaf {
+			left: 0;
+			top: 0;
+		}
+		&.fish {
+			top: 80px;
+			right: 0;
+		}
+		&.berries {
+			left: 0;
+			top: 775px;
+		}
+		&.mushrooms {
+			right: 0;
+			top: 880px;
+		}
+		&.leafs {
+			left: 0;
+			top: 1720px;
+		}
+		&.macaroni {
+			right: 0;
+			top: 2080px; 
+		}
 	}
 }
