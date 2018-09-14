@@ -77,29 +77,14 @@
 	.sidepic {
 		position: absolute;
 		
-		&.leaf {
-			left: 0;
-			top: 0;
-		}
-		&.fish {
-			top: 80px;
-			right: 0;
-		}
-		&.berries {
-			left: 0;
-			top: 775px;
-		}
-		&.mushrooms {
-			right: 0;
-			top: 880px;
-		}
-		&.leafs {
-			left: 0;
-			top: 1720px;
-		}
-		&.macaroni {
-			right: 0;
-			top: 2080px; 
-		}
+		&.left  { left: 0; }
+		&.right { right: 0; }
+		
+		&.leaf { top: 0; }
+		&.fish { top: 80px; }
+		&.berries { top: 775px; }
+		&.mushrooms { top: 880px; }
+		&.leafs { top: 1720px; }
+		&.macaroni { top: 2080px;  }
 	}
 }
