@@ -91,5 +91,7 @@
 
 	.photopoints {
 		margin: -90px 0 100px;
+		position: relative;
+		z-index: 2;
 	}
 }

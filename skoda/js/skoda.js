@@ -119,10 +119,15 @@ var photoSlider = {
 			this.wrapper.insertBefore(lastSlide, firstSlide)
 		}
 		else {
-			var slides = Arraw.from(this.wrapper.querySelectorAll('.slide'))
-			slides.forEach(function(slide) {
-				
-			})
+			var slides = Array.from(this.wrapper.querySelectorAll('.slide'))
+			for (var idx = 0; idx < slides.length; ++idx) {
+				var currentIndex = +slides[idx].getAttribute('data-index')
+				var nextIndex = currentIndex + 1 > this.slidesCount - 1 ? 0 : currentIndex + 1
+				if (nextIndex == index)
+					break
+
+				this.wrapper.appendChild(slides[idx])
+			}
 		}
 
 		this.activeIndex = index
