@@ -17,7 +17,14 @@ var videoSlider = {
 		rightArrow.addEventListener('click', function() { slider.slideTo(slider.activeVideo + 1) }, false)
 		
 		for (var pnt = 0; pnt < this.videos.length; ++pnt)
-			videoPoints.innerHTML += '<div class="point"></div>'
+			videoPoints.innerHTML += '<div class="point" data-index="' + pnt + '"></div>'
+
+		Array.from(videoPoints.querySelectorAll('.point')).forEach(function(point) {
+			point.addEventListener('click', function() {
+				var index = +this.getAttribute('data-index')
+				slider.slideTo(index)
+			}, false)
+		})
 
 		this.createPlayer()
 	},
