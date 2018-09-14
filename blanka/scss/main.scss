@@ -30,6 +30,20 @@ section {
 	color: $yellow;
 }
 
+@mixin Dots {
+	&:before, &:after {
+		position: absolute;
+		width: 100%;
+		content: "";
+		height: 3px;
+		background: 0 0 url('../images/core/dots.png') no-repeat;
+		margin-left: -$padding;
+		margin-right: -$padding;
+	}
+	&:before { top: 0; }
+	&:after { bottom: 0; }
+}
+
 @font-face {
     font-family: 'Noteworthy';
     src: url('fonts/Noteworthy-Bold.woff2') format('woff2'),
@@ -41,3 +55,5 @@ section {
 @import "marketing";
 @import "core";
 @import "solution";
+@import "results";
+@import "market";

@@ -1,0 +1,43 @@
+.results {
+	padding: 30px 0 0;
+
+	h3 {
+		@include Header;
+		padding-left: $padding;
+		margin-bottom: 30px;
+	}
+
+	.dots {
+		position: relative;
+		padding: 45px $padding;
+		display: flex;
+		justify-content: space-around;
+
+		@include Dots;
+
+		.block {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			.info {
+				margin-bottom: 30px;
+
+				&:last-child { margin-bottom: 0; }
+			}
+
+			.number {
+				@include Header;
+			}
+
+			.text {
+				color: #fff;
+				font-size: 16px;
+
+				b {
+					color: $yellow;
+				}
+			}
+		}
+	}
+}
