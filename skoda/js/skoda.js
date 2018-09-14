@@ -1,5 +1,6 @@
 function onYouTubeIframeAPIReady() {
 	videoSlider.init()
+	photoSlider.init()
 }
 
 var videoSlider = {
@@ -47,15 +48,51 @@ var videoSlider = {
 		var videoPoints = document.querySelector('.videopoints')
 		var activePoint = videoPoints.querySelector('.active')
 		var nthPoint = videoPoints.querySelector('.point:nth-child(' + (this.activeVideo + 1) + ')')
+		var slider = this
+
 		activePoint && activePoint.classList.remove('active')
 		nthPoint && nthPoint.classList.add('active')
 
-		var slider = this
-
 		this.videoPlayer = new YT.Player('videoplayer', {
-			height: '503',
-			width: '670',
+			height: '485',
+			width: '646',
 			videoId: slider.videos[slider.activeVideo]
 		})
+	}
+}
+
+var photoSlider = {
+	slidesCount: 0,
+	wrapper: null,
+	activeIndex: 0,
+	init: function() {
+		var leftArrow = document.querySelector('.photoslider .arrow.left')
+		var leftArrow = document.querySelector('.photoslider .arrow.right')
+		var photoPoints = document.querySelector('.photopoints')
+		var slider = this
+
+		this.wrapper = document.querySelector('.photoslider .slider')
+		this.slidesCount = this.wrapper.querySelectorAll('.slide').length
+
+		for (var pnt = 0; pnt < this.slidesCount; ++pnt)
+			photoPoints.innerHTML += '<div class="point" data-index="' + pnt + '"></div>'
+		
+		this.markActivePoint()
+	},
+
+	markActivePoint: function() {
+		var photoPoints = document.querySelector('.photopoints')
+		var activePoint = photoPoints.querySelector('.active')
+		activePoint && activePoint.classList.remove('active')
+		var newActive = photoPoints.querySelector('.point:nth-child(' + (this.activeIndex + 1) + ')')
+		newActive && newActive.classList.add('active')
+	},
+
+	slideTo: function(index) {
+		if (index < 0) index = this.slidesCount - 1
+		if (index >= this.slidesCount) index = 0
+
+		this.activeIndex = index
+		
 	}
 }
