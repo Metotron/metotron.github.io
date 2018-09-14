@@ -1,7 +1,10 @@
 function onYouTubeIframeAPIReady() {
 	videoSlider.init()
-	photoSlider.init()
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+	photoSlider.init()
+}, false)
 
 var videoSlider = {
 	videos: ['Z0zJ5A4b0v8', 'ntovh2Oi3Dk', 'gB-LEbCwwAI', 'i6t2wkScQXc'],
