@@ -1,0 +1,8 @@
+.solution {
+	padding-top: 190px;
+	position: relative;
+
+	h3 {
+		@include Header;
+	}
+}
