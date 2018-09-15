@@ -54,7 +54,7 @@
 		margin-top: 40px;
 		display: flex;
 		justify-content: space-around;
-		
+
 		.block {
 			text-align: center;
 		}
@@ -74,17 +74,140 @@
 		}
 	}
 
+	.arrow {
+		cursor: pointer;
+		font-size: 0px;
+		text-align: center;
+
+		&.right { transform: rotate(180deg); }
+		img {
+			display: inline-block;
+		}
+	}
+	.photoslider {
+		.slider {
+			background: center 82% url('../images/im_shadow.png') no-repeat;
+			font-size: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.slide {
+				$offset: 62%;
+				position: relative;
+
+				&:nth-child(n + 4) {
+					display: none;
+				}
+				&:first-child, &:nth-child(3) {
+					opacity: 0.7;
+					transform: scale(0.9);
+				}
+
+				&:first-child  { left: $offset; }
+				&:nth-child(2) { z-index: 2; }
+				&:nth-child(3) { left: -$offset; }
+			}
+		}
+	}
+
+	.videoslider, .photoslider {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		.imac, .slider {
+			flex-grow: 0;
+			position: relative;
+		}
+
+		.imac {
+			background: 0 0 url('../images/sliders/imac.png') no-repeat;
+			background-size: 100% auto;
+			height: 538px;
+			width: 640px;
+
+			iframe {
+				position: absolute;
+				top: 26px;
+				left: 26px;
+			}
+		}
+	}
+
+	.videoslider {
+		justify-content: space-between;
+	}
+
+	.photoslider {
+		.slider {
+			font-size: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 420px;
+			width: 880px;
+
+			.slide {
+				$offset: 60%;
+				position: relative;
+
+				&:nth-child(n + 4) {
+					display: none;
+				}
+				&:first-child, &:nth-child(3) {
+					opacity: 0.7;
+					transform: scale(0.9);
+				}
+
+				&:first-child  { left: $offset; }
+				&:nth-child(2) { z-index: 2; }
+				&:nth-child(3) { left: -$offset; }
+			}
+		}
+	}
+
+	.videopoints, .photopoints {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 60px;
+		position: relative;
+		z-index: 2;
+
+		.point {
+			border-radius: 50%;
+			width: 9px;
+			height: 9px;
+			margin-right: 20px;
+			background-color: transparent;
+			border: 1px solid $yellow;
+			cursor: pointer;
+
+			&:last-child { margin-right: 0; }
+
+			&.active {
+				background-color: $yellow;
+			}
+		}
+	}
+
+	.videopoints {
+		margin-top: 50px;
+	}
+
 	.sidepic {
 		position: absolute;
-		
+
 		&.left  { left: 0; }
 		&.right { right: 0; }
-		
+
 		&.leaf { top: 0; }
 		&.fish { top: 80px; }
 		&.berries { top: 775px; }
 		&.mushrooms { top: 880px; }
 		&.leafs { top: 1720px; }
-		&.macaroni { top: 2080px;  }
+		&.macaroni { top: 2300px;  }
 	}
 }

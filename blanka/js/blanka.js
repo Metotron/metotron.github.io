@@ -1,7 +1,10 @@
 function onYouTubeIframeAPIReady() {
-	//videoSlider.init()
-	//photoSlider.init()
+	videoSlider.init()
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+	photoSlider.init()
+}, false)
 
 var videoSlider = {
 	videos: ['Z0zJ5A4b0v8', 'ntovh2Oi3Dk', 'gB-LEbCwwAI', 'i6t2wkScQXc'],
@@ -42,8 +45,8 @@ var videoSlider = {
 	},
 
 	removePlayer: function() {
-		document.querySelector('.ipad iframe').remove()
-		document.querySelector('.ipad').innerHTML = '<div id="videoplayer"></div>'
+		document.querySelector('.imac iframe').remove()
+		document.querySelector('.imac').innerHTML = '<div id="videoplayer"></div>'
 	},
 
 	createPlayer: function() {
@@ -56,8 +59,8 @@ var videoSlider = {
 		nthPoint && nthPoint.classList.add('active')
 
 		this.videoPlayer = new YT.Player('videoplayer', {
-			height: '485',
-			width: '646',
+			height: '329',
+			width: '588',
 			videoId: slider.videos[slider.activeVideo]
 		})
 	}
