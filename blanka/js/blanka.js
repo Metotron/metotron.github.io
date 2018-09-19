@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false)
 
 var videoSlider = {
-	videos: ['Z0zJ5A4b0v8', 'ntovh2Oi3Dk', 'gB-LEbCwwAI', 'i6t2wkScQXc'],
+	videos: ['c2-AmvzFZ-A', 'lSV-TwDmTws'],
 	activeVideo: 0,
 	videoPlayer: null,
 
