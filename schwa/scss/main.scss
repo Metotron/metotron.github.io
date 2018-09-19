@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+}
+
+hmtl, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 1280px;
+	margin: 0 auto;
+	font-family: Roboto;
+	background: center 0 url('../images/bg/background.jpg') no-repeat #4b2d6b;
+	color: #fff;
+}
+
+$accentColor: #d78e7a;
+
+@mixin Header{
+	margin: 0;
+	font-size: 32px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: left;
+	font-weight: bold;
+}
+
+section {
+	padding: 0 172px;
+
+	h2 {
+		@include Header;
+	}
+}
+
+@import "header";
+@import "tasks";
+@import "audience";
+@import "idea";
