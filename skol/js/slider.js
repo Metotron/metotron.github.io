@@ -1,5 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
 	Slider.start(document.querySelector('.howitwas_results .slider'))
+
+	document.querySelector('.send_brief').addEventListener('click', function(ev) {
+		ev.preventDefault()
+		var parentDoc = window.parent.document
+		var target = parentDoc.querySelector('.feedback_block__button')
+		if (!target) return 0
+
+		if(parentDoc.dispatchEvent) {
+			var click = parentDoc.createEvent('MouseEvents')
+			click.initMouseEvent("click", true, true, window.parent, 1, 1, 1, 1, 1, false, false, false, false, 0, target)
+			target.dispatchEvent(click)
+			parentDoc.querySelector('.feedback_block__text').scrollIntoView(false)
+		}
+		else if(parentDoc.fireEvent) {
+			target.fireEvent('onclick')
+			parentDoc.querySelector('.feedback_block__text').scrollIntoView(false)
+		}
+	})
 }, false)
 
 var Slider = {
