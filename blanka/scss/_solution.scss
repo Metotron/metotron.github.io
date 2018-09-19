@@ -96,6 +96,7 @@
 			.slide {
 				$offset: 62%;
 				position: relative;
+				transition: all .2s;
 
 				&:nth-child(n + 4) {
 					display: none;
