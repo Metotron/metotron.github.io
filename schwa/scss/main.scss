@@ -10,7 +10,7 @@ body {
 	width: 1280px;
 	margin: 0 auto;
 	font-family: Roboto;
-	background: center 0 url('../images/bg/background.jpg') no-repeat #4b2d6b;
+	background: center 0 url('../images/bg/background.jpg') no-repeat #a4627e;
 	color: #fff;
 }
 
@@ -26,7 +26,7 @@ $accentColor: #d78e7a;
 }
 
 section {
-	padding: 0 172px;
+	padding: 0 155px;
 
 	h2 {
 		@include Header;
@@ -37,3 +37,5 @@ section {
 @import "tasks";
 @import "audience";
 @import "idea";
+@import "solution";
+@import "contest";

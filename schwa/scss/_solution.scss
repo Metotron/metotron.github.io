@@ -1,0 +1,157 @@
+.solution {
+	h2 {
+		margin: 50px 0 30px;
+	}
+	h3 {
+		@include Header;
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+
+	.blocks {
+		display: flex;
+		justify-content: space-between;
+
+		.block {
+			text-align: center;
+			font-size: 16px;
+			padding: 0 16px;
+
+			.picture {
+				margin-bottom: 20px;
+				width: 82px;
+				height: 82px;
+				border-radius: 50%;
+				border: 2px solid #fff;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+
+	.scheme {
+		display: flex;
+		align-items: center;
+		margin-top: 50px;
+		font-size: 14px;
+
+		.circle {
+			min-width: 177px;
+			width: 177px;
+			height: 177px;
+			border-radius: 50%;
+			border: 2px solid #fff;
+			text-align: center;
+			padding: 20px;
+
+			&:first-child { padding-top: 40px; }
+			&:last-child { padding-top: 30px; }
+
+			p {
+				font-size: 10px;
+			}
+		}
+		.dots {
+			min-width: 34px;
+			width: 34px;
+			border-bottom: 2px dotted #fff;
+		}
+		.rectangle {
+			flex-grow: 1;
+			border: 2px solid #fff;
+			border-radius: 54px;
+			padding: 22px;
+
+			p {
+				margin: 10px 0 0.8em;
+			}
+		}
+	}
+
+	.dotted_cross {
+		width: 68%;
+		margin: 0 auto;
+		border-bottom: 2px dotted #fff;
+		position: relative;
+		margin-top: 19px;
+
+		&:before, &:after {
+			content: "";
+			position: absolute;
+		}
+		&:before {
+			height: 38px;
+			border-right: 2px dotted #fff;
+			left: calc(50% - 2px);
+			top: -19px;
+		}
+		&:after {
+			border: 2px dotted #fff;
+			border-style: none dotted;
+			width: 100%;
+			height: 19px;
+		}
+	}
+
+	.bonuses {
+		margin-top: 19px;
+		font-size: 14px;
+		display: flex;
+		justify-content: space-between;
+
+		.bonus {
+			border-radius: 54px;
+			border: 2px solid #fff;
+			width: 32%;
+			padding: 30px;
+			text-align: center;
+
+			div {
+				text-transform: uppercase;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	h4 {
+		margin: 60px 0 0;
+		padding: 0;
+		font-size: 16px;
+	}
+
+	.map {
+		margin-top: 30px;
+		height: 308px;
+		background: 0 0 url('../images/solution/ad_map.png') no-repeat;
+		position: relative;
+
+		.c2c {
+			position: absolute;
+			left: 358px;
+			top: 82px;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.line_one, .line_two {
+			font-size: 14px;
+			font-weight: bold;
+			display: flex;
+			width: 600px;
+			position: absolute;
+			top: 167px;
+			left: 390px;
+
+			span {
+				width: 170px;
+				min-width: 170px;
+				letter-spacing: -0.03em;
+			}
+		}
+
+		.line_two {
+			top: 285px;
+		}
+	}
+}
