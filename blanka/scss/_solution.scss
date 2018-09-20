@@ -117,6 +117,8 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 20px;
+		position: relative;
+		z-index: 2;
 
 		.imac, .slider {
 			flex-grow: 0;
