@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+
+hmtl, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	width: 1280px;
+	margin: 0 auto;
+	font-family: Roboto;
+	background: center 0 url('../images/bg/background.jpg') no-repeat #a4627e;
+	color: #fff;
+}
+
+$accentColor: #d78e7a;
+
+@font-face {
+    font-family: 'Muller';
+    src: url('font/MullerExtraBold.woff2') format('woff2'),
+        url('font/MullerExtraBold.woff') format('woff'),
+        url('font/MullerExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@mixin Header{
+	margin: 0;
+	font-size: 32px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: left;
+	font-weight: bold;
+	font-family: Muller;
+}
+
+section {
+	padding: 0 155px;
+
+	h2 {
+		@include Header;
+	}
+}
+
+@import "header";
+@import "tasks";
+@import "audience";
+@import "idea";
+@import "solution";
+@import "contest";
+@import "celebrity";
+@import "results";
+@import "opinion";
+@import "command";

@@ -1,0 +1,134 @@
+.celebrity {
+	color: #000;
+	height: 1306px;
+	margin-top: -200px;
+	background: 0 top url('../images/bg/celebrity.png') no-repeat;
+	padding-top: 450px;
+	position: relative;
+
+	> img {
+		position: absolute;
+		top: 220px;
+		right: 130px;
+	}
+
+	h2 {
+		color: #000;
+	}
+
+	h3 {
+		font-weight: normal;
+		width: 450px;
+		line-height: 1em;
+		margin: 15px 0 0;
+		font-size: 16px;
+	}
+
+	.arrow {
+		cursor: pointer;
+		font-size: 0px;
+		text-align: center;
+		-moz-user-select: none;
+		user-select: none;
+
+		&.right { transform: rotate(180deg); }
+		img {
+			display: inline-block;
+		}
+	}
+
+	$rightOffset: 100px;
+	$sliderWidth: 610px;
+	.screenslider {
+		position: absolute;
+		top: 754px;
+		right: $rightOffset;
+		width: $sliderWidth;
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: space-between;
+
+		.slider{
+			width: 541px;
+			min-width: 541px;
+			height: 301px;
+			font-size: 0;
+			display: flex;
+			overflow: hidden;
+
+			.slide {
+				transition: margin-left 0.15s linear;
+			}
+		}
+	}
+
+	.photopoints {
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		width: $sliderWidth;
+		right: $rightOffset;
+		top: 1071px;
+
+		.point {
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			margin-right: 20px;
+			cursor: pointer;
+			background-color: #fff;
+			border: 2px solid #fff;
+
+			&:last-child { margin-right: 0; }
+
+			&.active {
+				background-color: transparent;
+			}
+		}
+	}
+
+	ul {
+		margin: 40px 0;
+		padding: 0;
+		list-style-position: inside;
+
+		li {
+			margin-bottom: 1em;
+		}
+	}
+
+	> div { width: 400px; }
+	.mtop { margin-top: 40px; }
+
+	.stat {
+		display: flex;
+		align-items: center;
+		margin-top: 40px;
+		font-size: 0;
+
+		> * { flex-shrink: 0; }
+		.text {
+			margin: 0 20px;
+
+			span {
+				line-height: 18px;
+				display: block;
+				margin-bottom: 6px;
+				font-size: 16px;
+
+				&.tiny {
+					margin: 0;
+				}
+			}
+			b {
+				font-size: 28px;
+			}
+		}
+
+		.like {
+			margin-left: 20px;
+		}
+	}
+}

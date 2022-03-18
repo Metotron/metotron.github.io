@@ -1,0 +1,38 @@
+.workers {
+	margin-top: 65px;
+	padding-top: 50px;
+	border-top: 1px solid #000;
+	padding-bottom: 136px;
+
+	h3 {
+		@include Header(#000);
+		margin-bottom: 50px;
+	}
+
+	.workers_line {
+		width: 960px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.worker {
+		width: 250px;
+		flex-shrink :0;
+		text-align: center;
+
+		.photo {
+			filter: saturate(0);
+			border-radius: 50%;
+
+			img {
+				border-radius: 50%;
+			}
+		}
+
+		.name {
+			font-size: 27px;
+			font-weight: bold;
+		}
+	}
+}

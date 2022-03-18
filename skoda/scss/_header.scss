@@ -1,0 +1,26 @@
+.header {
+	background: 0 0 url('../images/bg/header.jpg') no-repeat;
+	height: 570px;
+	color: #000;
+	padding-top: 120px;
+	padding-left: $LeftPadding;
+
+	h1 {
+		@include Header(#000);
+		font-size: 71px;
+	}
+
+	h2 {
+		font-size: 23px;
+		color: #fff;
+		margin: 10px 0 0;
+		font-weight: normal;
+		white-space: pre-line;
+		
+		span {
+			display: inline-block;
+			padding: 0 6px;
+			background-color: #000;
+		}
+	}
+}

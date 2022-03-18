@@ -1,0 +1,60 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	font-family: 'PT sans';
+}
+
+body {
+	width: 1280px;
+	margin: 0 auto;
+	background: 0 0 url('../images/bg/site_bg.jpg') repeat-y #000;
+}
+
+$yellow: #fcd646;
+$padding: 180px;
+
+section {
+	padding: 0 $padding;
+}
+
+@mixin Header($fontSize: 49px) {
+	margin: 0;
+	font-size: $fontSize;
+	text-align: left;
+	font-weight: bold;
+	letter-spacing: -0.04em;
+	color: $yellow;
+}
+
+@mixin Dots {
+	&:before, &:after {
+		position: absolute;
+		width: 100%;
+		content: "";
+		height: 3px;
+		background: 0 0 url('../images/core/dots.png') no-repeat;
+		margin-left: -$padding;
+		margin-right: -$padding;
+	}
+	&:before { top: 0; }
+	&:after { bottom: 0; }
+}
+
+@font-face {
+    font-family: 'Noteworthy';
+    src: url('fonts/Noteworthy-Bold.woff2') format('woff2'),
+        url('fonts/Noteworthy-Bold.woff') format('woff'),
+        url('fonts/Noteworthy-Bold.ttf') format('truetype');
+}
+
+@import "header";
+@import "marketing";
+@import "core";
+@import "solution";
+@import "results";
+@import "market";
+@import "command";

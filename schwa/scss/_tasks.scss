@@ -1,0 +1,43 @@
+.tasks {
+	padding-top: 72px;
+	$accent: #c0f24b;
+
+	h2 {
+		margin-bottom: 80px;
+	}
+	
+	.blocks {
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		
+		.block {
+			.picture {
+				$dimension: 82px;
+
+				width: $dimension;
+				height: $dimension;
+				border-radius: 50%;
+				border: 2px solid #fff;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 30px;
+			}
+
+			.text {
+				em {
+					font-style: normal;
+					color: $accent;
+
+					&:before, &:after {
+						content: "«";
+						display: inline-block;
+						color: $accent;
+					}
+					&:after { content: "»"; }
+				}
+			}
+		}
+	}
+}

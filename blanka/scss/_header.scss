@@ -1,0 +1,11 @@
+.header {
+	height: 629px;
+	background: left top url('../images/header.jpg') no-repeat, left bottom url('../images/header.png') no-repeat;
+	color: $yellow;
+	padding-top: 150px;
+	
+	h1 {
+		@include Header(57px);
+		line-height: 64px;
+	}
+}
